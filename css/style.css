@@ -170,7 +170,7 @@ body{
     }
     @keyframes Inspace{
         50%{
-            transform: translateX(50px) rotate(-30deg) scale(0.7);
+            transform: translateX(50px) rotate(-30deg) scale(0.0);
         }
     }   
         .cdn .mid h1{
