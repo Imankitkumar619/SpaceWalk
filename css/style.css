@@ -1,0 +1,518 @@
+@import './utilities.css';
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+
+}
+body{
+    color: white;
+    background: rgb(34, 33, 33);
+    margin: 0px;
+}
+ header{
+     background: linear-gradient(135deg, rgba(0,0,0,1),rgba(0,0,0,0.2)),url("../img/earth-horizon-wallpaper-preview.jpg");
+     min-height: 100vh;
+     min-width: 100vw;
+     background-size: cover;
+     
+ }
+ header nav{
+ padding-bottom: 0px;
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ align-items: center;
+ border-bottom: 1px solid rgb(32, 32, 32);
+ }
+ header nav .brand img{
+    height: 120px;
+    filter: invert(100%);
+    padding-left: 50px;
+    }
+    header .brand{
+        margin: -30px;
+    }
+ header nav .right{
+   display: flex;
+   justify-content: space-between;
+    align-items: center;
+    top: 10px;
+    }
+    header nav .right a{
+        letter-spacing: 2px;
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        position: relative;
+        font-size: 1.5rem;
+    }
+    header nav .right a::after{
+        content: "";
+          position: absolute;
+            left: 0px;
+            bottom: -15px;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width .2s ease-in-out;
+        }
+        header nav .right a:hover:after{
+           width: 80%;
+        }
+        header nav .right .search > div{
+            
+      background-color: rgba(77, 74, 74, 0.466);
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 25px;
+      margin: 10px;
+        }
+        header nav .right .search > div input{
+            background: transparent;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 0.8rem;
+        }
+        .cdn{
+            display: flex;
+            flex-direction: row;
+        }
+        .social div{
+            border: 1px;
+            width: 40px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+          align-items: center;
+            justify-content: center;
+            animation: moveIn 1s ease-in-out forwards;
+           }
+        @keyframes moveIn {
+            from{
+                transform: translate(-100px);
+            }
+            to{
+                transform: translate(0px);
+
+            }
+        }
+        .icon a {
+            cursor: pointer;
+            color: white;
+            margin: 0px 20px;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 25px;
+            transition: 1s ease-in;
+            position: relative;
+        }
+        .icon:hover a{
+            opacity: 0.1;
+        }
+        .icon a:hover{
+            opacity: 1;
+        }
+        .icon a:hover:nth-child(1){
+            background-color: rgb(5, 84, 230);
+            box-shadow: 0px 10px 50px 0 rgb(5, 84, 230) inset,
+                        0px 10px 50px 0 rgb(5, 84, 230) ,
+                        0px 10px 50px 0 rgb(5, 84, 230) inset,
+                        0px 10px 50px 0 rgb(5, 84, 230);
+        }
+        .icon a:hover:nth-child(2){
+            background-color: rgb(189, 59, 150);
+            box-shadow: 0 10px 50px 0 rgb(189, 59, 150) inset,
+                        0 10px 50px 0 rgb(189, 59, 150) ,
+                        0 10px 50px 0 rgb(189, 59, 150) inset,
+                        0 10px 50px 0 rgb(189, 59, 150);
+        }
+        .icon a:hover:nth-child(3){
+            background-color: rgb(19, 233, 19);
+            box-shadow: 0 10px 50px 0 rgb(19, 233, 19) inset,
+                        0 10px 50px 0 rgb(19, 233, 19) ,
+                        0 10px 50px 0 rgb(19, 233, 19) inset,
+                        0 10px 50px 0 rgb(19, 233, 19);
+        }
+        .icon a:hover:nth-child(4){
+            background-color:skyblue;
+            box-shadow: 0 10px 50px 0 skyblue inset,
+                        0 10px 50px 0 skyblue,
+                        0 10px 50px 0 skyblue inset,
+                        0 10px 50px 0 skyblue;
+        }
+        .social{
+       position: relative;
+        }
+        .icon{
+            position: absolute;
+            left: 0;
+            top: 0px;
+            align-items: center;
+            justify-content: center;
+            padding-left: 20px;
+            flex-direction: column;
+            min-height: 90vh;
+        }
+        .cdn .mid{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 700px;
+        }
+       .cdn .mid .animat img{
+            height: 45vh;
+            width: 22vw;
+            animation: Inspace 30s ease-in-out infinite alternate;
+    }
+    @keyframes Inspace{
+        50%{
+            transform: translateX(50px) rotate(-30deg) scale(0.7);
+        }
+    }   
+        .cdn .mid h1{
+            font-weight: 400px;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        .cdn .mid > div{
+          flex: 1;
+        }
+        .cdn .mid .left{
+            padding: 0 60px 0 30px;
+        }
+        .bt{
+            padding: 8px 30px;
+            border: 1px solid white;
+            border-radius: 50px;
+            outline: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight:bolder;
+            text-align: center;
+        }
+        .btn{
+            color: black;
+            background: white;
+            transition: all .5s ease-in-out;
+        }
+        .btn:hover{
+            background: transparent;
+            color: white;
+        }
+        .str{
+            display: flex;
+            align-items: center;
+            background-color: black;
+            justify-content: space-around;
+            padding: 40px 0px;
+        }
+        section.rocket{
+         display: grid;
+         grid-template-columns: 1fr 100px 1fr;  
+         grid-gap: 75px; 
+         padding: 100px 0px;
+        }
+        section.rocket .rkt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        section.rocket .rkt span{
+          font-size: 0px;
+          position: relative;
+        }
+        section.rocket .rkt span img{
+            width: 10vh;
+          }
+          section.rocket .block{
+              width: 70%;
+          }
+          section.rocket .block h1{
+            font-size: 40px;
+            font-weight: 400;
+        }
+       section.rocket .block .underline{
+            position: relative;
+            margin-bottom: 35px;
+            }
+        
+       section.rocket .block .underline:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        display: block;
+        width: 30%;
+        height: 2px;
+        background: white;
+        }
+       section.rocket p{
+           line-height: 1.6;
+       }
+       section.rocket .block h2{
+           margin-bottom: 20px;
+           font-weight: 400;
+          
+       }
+       section.rocket .block.load{
+           padding-top: 125px;
+           text-align: center;
+       } 
+       section.rocket .block.dragon{
+        padding-top: 110px;
+    } 
+    section.rocket .block.capacity{
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+    }
+    section.rocket .block.capacity > div:first-child{
+        margin-right: 40px;
+    }
+    h4{
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    h6{
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .engine{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+    }
+    .engine img{
+       width: 180px;
+    }
+    .art .flowt{
+        position: sticky;
+        float: right;
+        top: 60px;
+        margin-right: -80px;
+    }
+    .art .flowt img{
+        height: 450px;
+        
+    }
+    section.rocket .rkt span:after{
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 0px;
+        background: white;
+        transition: width 1s ease-in-out;
+    }
+    section.rocket .rkt span:nth-child(1):after{
+        bottom: 62%x;
+        left: 96%;
+    }
+    section.rocket .rkt span:nth-child(2):after{
+        bottom: 62%;
+        right: 96%;
+    }
+    section.rocket .rkt span:nth-child(3):after{
+        bottom: 62%;
+        right: 96%;
+    }
+    section.rocket .rkt span:nth-child(3):before{
+        bottom: 39%;
+        left: 96%;
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        width:0px;
+        background: white;
+        transition: width 1s ease-in-out;
+    }
+    section.rocket .rkt span.active:nth-child(1):after{
+    width: 170px;
+    }
+    section.rocket .rkt span.active:nth-child(2):after{
+        width: 170px;
+    }
+    section.rocket .rkt span.active:nth-child(3):after{
+        width: 170px;
+    }
+    section.rocket .rkt span.active:nth-child(3):before{
+  width: 60px;
+    }
+    @keyframes jump{
+        50%{
+            transform: translateY(-50px);
+        }
+    }
+    section.rocket .rkt span.active:nth-child(1){
+        animation: jump 5s ease-in-out;
+    }
+    footer{
+        background: black;
+        padding: 60px 0;
+        min-width: 100vw;
+    }
+    footer > div{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+    footer .copyright span{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    footer .copyright img{
+    height: 145px;
+    filter: invert(300%);
+    }
+    footer h1{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    footer ul{
+        list-style-type: none;
+    }
+    footer ul li{
+        margin: 10px;
+    }
+    footer ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: gray;
+        transition: all 1s ease-in-out;
+    }
+    footer ul li a:hover{
+        color: white;
+    }
+    @media (max-width:1270px) {
+        header nav{
+        display: flex;
+        flex-direction: column;
+        }
+        .brand{
+            padding-left: 0px;
+        }
+       
+    }
+   
+    @media (max-width:750px) {
+       
+        nav .right{ 
+            flex-direction: column;
+            padding-top: 5px;
+            padding-left: 50px;
+          }
+        .right .home {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+         .right .search{
+            padding-top: 10px;
+    
+         }
+         .right .home{
+          padding-top: 5px;
+        
+       }
+         .brand img{
+            align-items: center;
+            padding-left: 0px;
+            margin-top: 30px;
+            
+        }
+        .right .home a{
+            padding-top: 20px;
+        
+         }
+         .bt{
+            font-size: 7px;
+        }
+       h1{
+           font-size: 12px;
+       }
+       p{
+           font-size: 12px;
+       }
+       
+       section.rocket {
+        display: grid;
+        grid-template-columns: 1fr 100px 1fr;
+        grid-gap: 4px;
+        padding: 100px 0px;
+    }
+    }
+    @media (max-width:500px) {
+       header{
+           margin-right: -130px;
+       }
+       footer{
+           margin-right: -130px;
+       }
+        footer > div{
+            flex-direction: column;
+        }
+        footer .copyright{
+            margin-bottom: 30px;
+        }
+        footer ul{
+        margin-bottom: 20px;
+       }
+       div.comp{
+        padding-right: 20px;
+    }
+    .block.dragon {
+        padding-top: 7px;
+    }
+    h4{
+        font-size: 7px;
+    }
+    h6 {
+        font-size: 21px;
+        font-weight: 400;
+    }
+    p{
+        font-size: 8px;
+    }
+    section.rocket .block h2{
+        margin-bottom: 8px;
+    font-size: 9px;   
+    }
+    section.rocket .block.dragon{
+        padding-top: 40px;
+    } 
+    section.rocket .block h1{
+    font-size: 9px;   
+    }
+    .rkt span img {
+        width: 39%;
+    }
+    .engine img {
+        width: 36px;
+    }
+    section.rocket .rkt span{
+        width: 1px;
+      }
+      section.rocket .rkt span.active:nth-child(1):after{
+        width: 90px;
+        }
+        section.rocket .rkt span.active:nth-child(2):after{
+            width: 70px;
+        }
+        section.rocket .rkt span.active:nth-child(3):after{
+            width: 70px;
+        }
+        section.rocket .rkt span.active:nth-child(3):before{
+      width: 90px;
+        }
+    }
+    
+    

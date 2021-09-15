@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Walk | MiSSIONS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+        header{
+     background: linear-gradient(135deg rgb(119, 112, 112),rgba(151, 143, 143, 0.2)),url("./img/earth2bg.jpg");
+    margin: 0px;
+    padding: 0px;
+     background-size: cover;
+     background-color: black;
+ }
+ header nav{
+ padding-bottom: 0px;
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ align-items: center;
+ border-bottom: 1px solid rgb(32, 32, 32);
+ }
+ header nav .brand img{
+    height: 120px;
+    filter: invert(100%);
+    padding-left: 50px;
+    }
+    header .brand{
+        margin: -30px;
+    }
+ header nav .right{
+   display: flex;
+   justify-content: space-between;
+    align-items: center;
+    top: 10px;
+    }
+    header nav .right a{
+        letter-spacing: 2px;
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        position: relative;
+    }
+    header nav .right a::after{
+        content: "";
+          position: absolute;
+            left: 0px;
+            bottom: -15px;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width .2s ease-in-out;
+        }
+        header nav .right a:hover:after{
+           width: 80%;
+        }
+        header nav .right .search > div{
+            
+      background-color: rgba(77, 74, 74, 0.466);
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 25px;
+      margin: 10px;
+        }
+        header nav .right .search > div input{
+            background: transparent;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        section div{
+            text-align: center;
+            
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.9;
+        }
+       div p{
+           background-color: black;
+       }
+     .bg1{
+         background-image: url("./update/solar_orbiter_and_parker_solar_probe_web.jpg");
+         height: 100vh;
+         min-width: 100vw;
+     }
+    .bg3{
+         background-image: url("./update/venus.jpg");
+         height: 60vh;
+         width: 100vw;
+     }
+     .bg4{
+         background-image: url("./update/mer.jpg");
+       min-height: 70vh;
+         min-width: 100vw;
+     }
+     .bg5{
+         background-image: url("./update/thumb-1920-435238.jpg");
+       min-height: 70vh;
+         min-width: 100vw;
+     }
+     .bg6{
+         background-image: url("./update/mars.jpg");
+       min-height: 70vh;
+         min-width: 100vw;
+     }
+     .bg7{
+         background-image: url("./update/jupitor.jpg");
+         height: 100vh;
+         min-width: 100vw;
+     }
+     .bg8{
+         background-image: url("./update/NRa32RqEt2HyoruP4a8Gxk.jpg");
+         height: 100vh;
+         min-width: 100vw;
+     }
+     .bg9{
+         background-image: url("./update/ur.jpg");
+       min-height: 70vh;
+         min-width: 100vw;
+     }
+     .bg10{
+         background-image: url("./update/urns.jpg");
+       min-height: 70vh;
+         min-width: 100vw;
+     }
+     .bg11{
+         background-image: url("./update/voy.jpg");
+       min-height: 70vh;
+         min-width: 100vw;
+        }
+        
+     footer{
+        background: black;
+        padding: 60px 0;
+    }
+    footer > div{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+    footer .copyright span{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    footer .copyright img{
+    height: 145px;
+    filter: invert(300%);
+    }
+    footer h1{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    footer ul{
+        list-style-type: none;
+    }
+    footer ul li{
+        margin: 10px;
+    }
+    footer ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: gray;
+        transition: all 1s ease-in-out;
+    }
+    footer ul li a:hover{
+        color: white;
+    }
+    .contain{
+    width: 1450px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+footer h1{
+    color: white;
+}
+footer span{
+    color: white;
+}
+.bt{
+            padding: 8px 30px;
+            border: 1px solid white;
+            border-radius: 50px;
+            outline: none;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight:bolder;
+            text-align: center;
+        }
+        .btn{
+            color: black;
+            background: white;
+            transition: all .5s ease-in-out;
+        }
+        .btn:hover{
+            background: transparent;
+            color: white;
+        }
+        
+        @media (max-width:1270px) {
+        header nav{
+        display: flex;
+        flex-direction: column;
+        }
+        .brand{
+            padding-left: 0px;
+        }
+       
+    }
+   
+    @media (max-width:750px) {
+        header nav{
+            background-color: black;
+        }
+       
+        nav .right{ 
+            flex-direction: column;
+            padding-top: 5px;
+            padding-left: 50px;
+          }
+        .right .home {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .right .search{
+            padding-top: 10px;
+    
+         }
+         .right .home{
+          padding-top: 5px;
+        
+       }
+         .brand img{
+            align-items: center;
+            padding-left: 0px;
+            margin-top: 30px;
+            
+        }
+        .right .home a{
+            padding-top: 20px;
+        
+         }
+         
+        
+    }
+    @media (max-width:500px) {
+        header nav .right .search > div {
+
+    padding: 6px 5px;
+    border-radius: 25px;
+    margin-right: 45px;
+        }       
+        footer > div{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        footer .copyright{
+            margin-bottom: 30px;
+        }
+        footer ul{
+        margin-bottom: 20px;
+       }
+       div.comp{
+           padding-right: 20px;
+       }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <div class="brand">
+                <a href="Spacelite.html">
+                    <img src="./img/favpng_space-walk-of-strongsville-inflatable-space-walk-of-east-peoria-party.png" alt="">
+                </a>
+            </div>
+            <div class="right">
+                 <div class="home">
+                    <a href="SpaceWalk.html">Space</a>
+                     <a href="gallary.html">Gallary</a>
+                     <a href="#">Missions</a>
+                     <a href="night.html">‎Constellations</a>
+                 </div>
+                 <div class="search">
+           <div>
+               <img src="./img/search.png" alt="">
+               <input type="text" placeholder="search">
+           </div>
+                 </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="bg1">
+            <h1>Parker Solor Probe</h1>
+            <br>
+            <p>
+                NASA's Parker Solar Probe mission has returned unprecedented data from near the Sun, culminating in new discoveries published on Dec. 4, 2019, in the journal Nature. Among the findings are new understandings of how the Sun's constant outflow of material, the solar wind, behaves. Seen near Earth -- where it can interact with our planet's natural magnetic field and cause space weather effects that interfere with technology -- the solar wind appears to be a relatively uniform flow of plasma. But Parker Solar Probe's observations reveal a complicated, active system not seen from Earth.
+            </p>
+            <button class="bt btn">Read MORE</button>
+        </div>
+        <div class="bg4"> <h1>Mercury</h1>
+        <br> <p>Mercury, America's first human space flight program, introduced the nation to its first astronauts. There were six total flights with six astronauts flown. Total flight time for these missions was 53 hours, 55 minutes and 27 seconds.</p>
+        <button class="bt btn">Read MORE</button>   
+    </div>
+        <div class="bg3"> <h1>Venus </h1> <br>
+        <p>The data sonification in the video translates data from Parker Solar Probe’s FIELDS instrument into sound. FIELDS detected a natural, low-frequency radio emission as it moved through Venus’ atmosphere that helped scientists calculate the density of the planet’s electrically charged upper atmosphere, called the ionosphere.</p>
+        <button class="bt btn">Read MORE</button>  
+    </div>
+        <div class="bg5"> <h1>Earth</h1>
+        <br> <p>stronauts (from left) Akihiko Hoshide and Thomas Pesquet are pictured outside of the space station with their U.S. spacesuit helmet visors up during earlier spacewalks.</p>
+        <button class="bt btn">Read MORE</button>   
+    </div>
+        <div class="bg6"> <h1>Mars</h1><br> <p>NASA’s Perseverance Mars rover successfully collected its first pair of rock samples, and scientists already are gaining new insights into the region. After collecting its first sample, named “Montdenier,” Sept. 6, the team collected a second, “Montagnac,” from the same rock Sept. 8.</p>  <button class="bt btn">Read MORE</button> </div>
+        <div class="bg7"> <h1>jupiter</h1><br> <p>NASA's Juno mission is exploring Jupiter from orbit, beaming back amazing photos, atmospheric data and other observations about the largest planet in our solar system. The Juno probe launched Aug. 5, 2011 and arrived in orbit around Jupiter on July 4, 2016. It is the farthest space probe ever to be powered by solar arrays. The $1.1 billion mission is expected to run through July 2021, but the science of Jupiter it returns will last a lifetime. Learn more about Juno's Jupiter discoveries here.</p>  <button class="bt btn">Read MORE</button> </div>
+        <div class="bg8"> <h1>Saturn</h1> <br> <p>New NASA research confirms that Saturn is losing its iconic rings at the maximum rate estimated from Voyager 1 & 2 observations made decades ago. The rings are being pulled into Saturn by gravity as a dusty rain of ice particles under the influence of Saturn’s magnetic field</p> <button class="bt btn">Read MORE</button></div>
+        <div class="bg9"> <h1>Uranus</h1><br> <p>Astronomers have detected X-rays from Uranus for the first time, using NASA’s Chandra X-ray Observatory. This result may help scientists learn more about this enigmatic ice giant planet in our solar system.</p>  <button class="bt btn">Read MORE</button> </div>
+        <div class="bg10"><h1>Naptune</h1><br> <p>This is an artist's concept of the tiny moon Hippocamp that was discovered by the Hubble Space Telescope in 2013. Only 20 miles across, it may actually be a broken-off fragment from a much larger neighboring moon, Proteus, seen as a smaller crescent in the upper right. This is the first evidence for a moon being an offshoot from a comet collision with a much larger parent body. Credit: NASA, ESA and J. Olmsted (STScI)</p> <button class="bt btn">Read MORE</button></div>
+        <div class="bg11"><h1>VOyAGER 1</h1><br> <p>NASA's Voyager 2 is the second spacecraft to enter interstellar space. On Dec. 10, 2018, the spacecraft joined its twin—Voyager 1—as the only human-made objects to enter the space between the stars.</p> <button class="bt btn">Read MORE</button></div>
+       
+
+    </section>
+    <footer>
+        <div class="contain">
+            <div class="copyright">
+                <div>
+                    
+                        <img src="./img/favpng_space-walk-of-strongsville-inflatable-space-walk-of-east-peoria-party.png" alt="">
+                    
+                </div>
+                <span>&copy; 2021 Ankit Kumar designed</span>
+            </div>
+            <div>
+                <h1>About us</h1>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="comp">
+            <h1>Companies</h1>
+            <ul>
+                <li><a href="#">Carrer</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

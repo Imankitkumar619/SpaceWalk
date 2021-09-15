@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Walk | CONSTELLATIONS</title>
+</head>
+<style>
+    *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+        header{
+     background: linear-gradient( rgb(8, 8, 8),rgba(0,0,0,0.2)),url("./update/earth2bg.jpg");
+    margin-right: -34px;
+    padding: 0px;
+     background-size: cover;
+     min-width: 100vw;
+     
+ }
+ header nav{
+ padding-bottom: 0px;
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ align-items: center;
+ border-bottom: 1px solid rgb(32, 32, 32);
+ }
+ header nav .brand img{
+    height: 120px;
+    filter: invert(100%);
+    padding-left: 50px;
+    }
+    header .brand{
+        margin: -30px;
+    }
+ header nav .right{
+   display: flex;
+   justify-content: space-between;
+    align-items: center;
+    top: 10px;
+    }
+    header nav .right a{
+        letter-spacing: 2px;
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        position: relative;
+    }
+    header nav .right a::after{
+        content: "";
+          position: absolute;
+            left: 0px;
+            bottom: -15px;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width .2s ease-in-out;
+        }
+        header nav .right a:hover:after{
+           width: 80%;
+        }
+        header nav .right .search > div{
+            
+      background-color: rgba(77, 74, 74, 0.466);
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 25px;
+      margin: 10px 7rem;
+        }
+        header nav .right .search > div input{
+            background: transparent;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            min-width: 10vw;
+        }
+        footer{
+        background: black;
+        padding: 60px 0;
+        min-width: 100vw;
+        margin-right: -34px;
+    }
+    footer > div{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+    footer .copyright span{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    footer .copyright img{
+    height: 145px;
+    filter: invert(300%);
+    }
+    footer h1{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    footer ul{
+        list-style-type: none;
+    }
+    footer ul li{
+        margin: 10px;
+    }
+    footer ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        color: gray;
+        transition: all 1s ease-in-out;
+    }
+    footer ul li a:hover{
+        color: white;
+    }
+    .contain{
+    width: 1450px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+footer h1{
+    color: white;
+}
+footer span{
+    color: white;
+}
+.bt{
+            padding: 8px 30px;
+            border: 1px solid white;
+            border-radius: 50px;
+            outline: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight:bolder;
+            text-align: center;
+        }
+        .btn{
+            color: black;
+            background: white;
+            transition: all .5s ease-in-out;
+        }
+        .btn:hover{
+            background: transparent;
+            color: white;
+        }
+        section{
+            min-width: 100vw;
+              margin: -34px;
+              padding-bottom: 67px;
+           background-color: rgb(43, 40, 40);
+           font-size: 62.5%;
+       }
+       .vd .update{
+      font-size: 3rem;
+      margin: 2rem;
+      text-transform: capitalize;
+      color: white;
+      text-shadow: 0 .3rem .5rem black;
+       }
+        .video{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .video .vid{
+            height: 15rem;
+            width: 25rem;
+            margin: 2rem;
+            box-shadow: 0 .5rem 1rem black;
+            overflow: hidden;
+            border-radius: 2rem;
+        }
+        .video .vid iframe{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        .video .vid iframe:hover{
+            transition: .2s linear;
+            transform: scale(1.1);
+        }
+        @media (max-width:1270px) {
+        header nav{
+        display: flex;
+        flex-direction: column;
+        }
+        .brand{
+            padding-left: 0px;
+        }
+       
+    }
+   
+    @media (max-width:750px) {
+        header nav{
+            background-color: black;
+        }
+       
+        nav .right{ 
+            flex-direction: column;
+            padding-top: 5px;
+            padding-left: 50px;
+          }
+        .right .home {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .right .search{
+            padding-top: 10px;
+    
+         }
+         .right .home{
+          padding-top: 5px;
+        
+       }
+         .brand img{
+            align-items: center;
+            padding-left: 0px;
+            margin-top: 30px;
+            
+        }
+        .right .home a{
+            padding-top: 20px;
+        
+         }
+         
+        
+    }
+    @media (max-width:500px) {
+        header nav .right .search > div {
+
+    padding: 6px 5px;
+    border-radius: 25px;
+    margin-right: 45px;
+        }       
+        footer > div{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        footer .copyright{
+            margin-bottom: 30px;
+        }
+        footer ul{
+        margin-bottom: 20px;
+       }
+       div.comp{
+           padding-right: 20px;
+       }
+    }
+</style>
+<body>
+    <header>
+        
+        <nav>
+            <div class="brand">
+                <a href="Spacelite.html">
+                    <img src="./img/favpng_space-walk-of-strongsville-inflatable-space-walk-of-east-peoria-party.png" alt="">
+                </a>
+            </div>
+            <div class="right">
+                 <div class="home">
+                    <a href="SpaceWalk.html">Space</a>
+                    <a href="gallary.html">Gallary</a>
+                    <a href="Satellites.html">Missions</a>
+                    <a href="#">‎Constellations</a>
+                 </div>
+                 <div class="search">
+           <div>
+               <img src="./img/search.png" alt="">
+               <input type="text" placeholder="search">
+           </div>
+                 </div>
+            </div>
+        </nav>
+    </header>
+    <Section>
+        <div class="vd">
+            <div class="update">TONIGHT NIGHT SKY CONSTELLATIONS</div>
+           <div class="video">
+               <div class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IaiR2KJBp-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/V95bJV6J2mI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XtdhQ6dWehM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JkXEuatAquI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HPZqTDJnkSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="vid">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IoiEXWvC2hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               
+               
+               
+           </div>
+        </div>
+    </Section>
+    <footer>
+        <div class="contain">
+            <div class="copyright">
+                <div>
+                    
+                        <img src="./img/favpng_space-walk-of-strongsville-inflatable-space-walk-of-east-peoria-party.png" alt="">
+                    
+                </div>
+                <span>&copy; 2021 Ankit Kumar designed</span>
+            </div>
+            <div>
+                <h1>About us</h1>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        <div class="comp">
+            <h1>Companies</h1>
+            <ul>
+                <li><a href="#">Carrer</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
