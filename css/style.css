@@ -446,7 +446,7 @@ body{
        section.rocket {
         display: grid;
         grid-template-columns: 1fr 100px 1fr;
-        grid-gap: 4px;
+        grid-gap: 8px;
         padding: 100px 0px;
     }
     }
@@ -511,7 +511,7 @@ body{
             width: 70px;
         }
         section.rocket .rkt span.active:nth-child(3):before{
-      width: 90px;
+      width: 0px;
         }
     }
     
